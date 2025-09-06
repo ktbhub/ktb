@@ -82,7 +82,7 @@
         "teleteeshirt.com": [
             {
                 "pattern": "",
-                "action": "skip",
+                "action": "generate",
                 "mockup_sets_to_use": ["set1", "set2"],
                 "coords": { "x": 250, "y": 176, "w": 314, "h": 422 }
             }
