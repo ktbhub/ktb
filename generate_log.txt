@@ -1,18 +1,8 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-06 15:34:25
-
-Domain: teeextra.com
-  Processed Images: 28
-  Skipped Images: 0
-  Total URLs to Process: 14
-
-Domain: clickoneshirt.com
-  Processed Images: 106
-  Skipped Images: 0
-  Total URLs to Process: 53
+Timestamp: 2025-09-06 15:44:45
 
 Domain: teleteeshirt.com
-  Processed Images: 136
+  Processed Images: 46
   Skipped Images: 0
-  Total URLs to Process: 68
+  Total URLs to Process: 23
 
