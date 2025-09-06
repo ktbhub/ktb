@@ -1,8 +1,8 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-06 13:35:52
+Timestamp: 2025-09-06 14:29:05
 
-Domain: teespix.com
+Domain: clickoneshirt.com
   Processed Images: 0
-  Skipped Images: 95
-  Total URLs to Process: 95
+  Skipped Images: 1
+  Total URLs to Process: 1
 
