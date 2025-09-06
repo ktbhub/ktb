@@ -50,6 +50,17 @@ jobs:
           git commit -m "Generated new mockups and log [skip ci]" || echo "No changes to commit"
           git push
 
+      - name: Trigger upload workflow on ktbupload
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.KTBGIT_PAT }}
+          script: |
+            github.rest.repos.createDispatchEvent({
+              owner: 'ktbgit',
+              repo: 'ktbupload',
+              event_type: 'upload-zip'
+            })
+
       - name: Send Success Message to Telegram
         if: success()
         uses: appleboy/telegram-action@master
