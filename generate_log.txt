@@ -1,18 +1,13 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-07 09:33:17
+Timestamp: 2025-09-07 09:51:59
 
-Domain: uscraftedtees.com
+Domain: geekteesus.com
   Processed Images: 30
   Skipped Images: 0
-  Total URLs to Process: 30
-
-Domain: capitoneshirt.com
-  Processed Images: 0
-  Skipped Images: 73
-  Total URLs to Process: 73
+  Total URLs to Process: 15
 
 Domain: teleteeshirt.com
-  Processed Images: 196
+  Processed Images: 104
   Skipped Images: 1
-  Total URLs to Process: 99
+  Total URLs to Process: 53
 
