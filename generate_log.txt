@@ -1,8 +1,8 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-07 13:38:35
+Timestamp: 2025-09-07 13:54:17
 
 Domain: techteesusa.com
-  Processed Images: 12
+  Processed Images: 118
   Skipped Images: 0
-  Total URLs to Process: 6
+  Total URLs to Process: 59
 
