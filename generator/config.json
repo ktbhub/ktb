@@ -26,6 +26,14 @@
             "watermark_text": "[KTB]",
             "title_prefix_to_add": "Officials",
             "title_suffix_to_add": "Tee Shirt"
+        },
+        "vflippa": {
+            "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_5.webp",
+            "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_5.webp",
+            "coords": { "x": 310, "y": 201, "w": 406, "h": 535 },
+            "watermark_text": "[XU]",
+            "title_prefix_to_add": "Officials",
+            "title_suffix_to_add": "T Shirt Sweater"
         }
     },
     "domains": {
