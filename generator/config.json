@@ -231,7 +231,7 @@
             {
                 "pattern": "-hoodie.jpg",
                 "action": "generate",
-                "mockup_sets_to_use": ["vflippa"],
+                "mockup_sets_to_use": ["whatwillwear"],
                 "coords": { "x": 343, "y": 415, "w": 334, "h": 363 },
                 "skipBlack": true
             }
@@ -248,7 +248,7 @@
             {
                 "pattern": "-Poster.webp",
                 "action": "generate",
-                "mockup_sets_to_use": ["vflippa"],
+                "mockup_sets_to_use": ["whatwillwear"],
                 "coords": { "x": 218, "y": 136, "w": 313, "h": 438 }
             }
         ]
