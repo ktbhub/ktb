@@ -201,9 +201,17 @@
             {
                 "pattern": "-hoodie.jpg",
                 "action": "generate",
-                "mockup_sets_to_use": ["whatwillwear", "ktbtee"],
+                "mockup_sets_to_use": ["vflippa"],
                 "coords": { "x": 343, "y": 415, "w": 334, "h": 363 },
                 "skipBlack": true
+            }
+        ],
+        "fanaticity.com": [
+            {
+                "pattern": "-T-Shirt.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["vflippa"],
+                "coords": { "x": 404, "y": 186, "w": 326, "h": 425 },
             }
         ]
     }
