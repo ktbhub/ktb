@@ -1,4 +1,4 @@
-name: KTB Image Gen V2
+name: KTB Image Gen
 
 on:
   repository_dispatch:
@@ -67,7 +67,7 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: "✅ KTB Image Gen V2 - Done."
+          message: "✅ KTB Image Gen - Done."
 
       - name: Send Failure Message to Telegram
         if: failure()
@@ -75,4 +75,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: "❌ KTB Image Gen V2 - Fail."
+          message: "❌ KTB Image Gen - Fail."
