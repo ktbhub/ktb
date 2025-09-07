@@ -7,7 +7,7 @@
             "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white.webp",
             "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black.webp",
             "coords": { "x": 444, "y": 331, "w": 370, "h": 527 },
-            "watermark_text": "[XU]",
+            "watermark_text": "[CH]",
             "title_prefix_to_add": "",
             "title_suffix_to_add": ""
         },
@@ -32,7 +32,7 @@
             "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_5.webp",
             "coords": { "x": 310, "y": 201, "w": 406, "h": 535 },
             "watermark_text": "[XU]",
-            "title_prefix_to_add": "Officials",
+            "title_prefix_to_add": "",
             "title_suffix_to_add": "T Shirt Sweater"
         }
     },
