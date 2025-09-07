@@ -1,6 +1,6 @@
 {
     "defaults": {
-        "title_clean_keywords": ["shirt", "t-shirt", "tshirt", "sweater", "sweatshirt", "poster", "white-poster", "ornament", "black-poster", "Poster-sblack", "Posters-white", "t-shirts", "T-shirts-shirt"]
+        "title_clean_keywords": ["shirt", "t-shirt", "tshirt", "sweater", "sweatshirt", "poster", "white-poster", "ornament", "black-poster", "Posters-black", "Posters-white", "t-shirts", "T-shirts-shirt"]
     },
     "mockup_sets": {
         "printiment": {
