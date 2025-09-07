@@ -179,18 +179,18 @@ def cleanup_old_zips():
 
 def main():
     print("Bắt đầu quy trình tự động generate mockup.")
-    
+
     output_path = os.path.join(REPO_ROOT, OUTPUT_DIR)
     if not os.path.exists(output_path):
         os.makedirs(output_path)
-    
+
     cleanup_old_zips()
 
     configs = load_config()
     defaults = configs.get("defaults", {})
     domains_configs = configs.get("domains", {})
     mockup_sets_config = configs.get("mockup_sets", {})
-    
+
     title_clean_keywords = defaults.get("title_clean_keywords", [])
 
     try:
@@ -215,24 +215,24 @@ def main():
         return
 
     urls_summary = {}
-    zip_files = {}
+    images_for_zip = {}
 
     for domain, new_count in domains_to_process.items():
         print(f"Bắt đầu xử lý {new_count} ảnh mới từ domain: {domain}")
-        
+
         current_size = get_repo_size(REPO_ROOT)
         if current_size >= MAX_REPO_SIZE_MB:
             print(f"Cảnh báo: Dung lượng repo đã vượt quá {MAX_REPO_SIZE_MB}MB. Bỏ qua.")
             break
-            
+
         domain_rules = domains_configs.get(domain, [])
-        
+
         if not domain_rules:
             print(f"Không có quy tắc nào được định nghĩa cho domain {domain}. Bỏ qua.")
             continue
-            
+
         domain_rules.sort(key=lambda x: len(x['pattern']), reverse=True)
-            
+
         try:
             urls_url = f"https://raw.githubusercontent.com/ktbihow/image-crawler/main/{domain}.txt"
             all_urls_content = requests.get(urls_url).text
@@ -240,13 +240,12 @@ def main():
         except Exception as e:
             print(f"Lỗi: Không thể tải file URL cho domain {domain}. Bỏ qua. {e}")
             continue
-        
+
         urls_to_process = all_urls[:new_count]
-        
+
         processed_count = 0
         skipped_count = 0
-        
-        # Tiền tải tất cả mockups cần thiết cho domain này để tối ưu hóa
+
         mockup_cache = {}
         mockups_to_load = set()
         for rule in domain_rules:
@@ -267,16 +266,16 @@ def main():
                 "title_prefix_to_add": mockup_config.get("title_prefix_to_add", ""),
                 "title_suffix_to_add": mockup_config.get("title_suffix_to_add", "")
             }
-        
+
         for url in urls_to_process:
             if get_repo_size(REPO_ROOT) >= MAX_REPO_SIZE_MB:
                 print(f"Đã đạt giới hạn dung lượng. Dừng lại.")
                 break
-                
+
             filename = os.path.basename(url)
-            
+
             matched_rule = next((rule for rule in domain_rules if rule["pattern"] in filename), None)
-            
+
             if not matched_rule or matched_rule["action"] == "skip":
                 print(f"Skipping: Rule not found or action is 'skip' for file: {filename}")
                 skipped_count += 1
@@ -293,81 +292,89 @@ def main():
                 if not img:
                     skipped_count += 1
                     continue
-                    
+
                 crop_coords = matched_rule.get("coords")
                 if not crop_coords:
                     print(f"Không có tọa độ crop trong rule cho file {filename}. Bỏ qua.")
                     skipped_count += 1
                     continue
-                    
+
                 pixel = img.getpixel((crop_coords['x'], crop_coords['y']))
                 avg_brightness = sum(pixel[:3]) / 3
                 is_white = avg_brightness > 128
-                
+
                 if matched_rule.get("skipWhite") and is_white:
                     print(f"Skipping white shirt as per rule for file: {filename}")
                     skipped_count += 1
                     continue
-                
+
                 if matched_rule.get("skipBlack") and not is_white:
                     print(f"Skipping black shirt as per rule for file: {filename}")
                     skipped_count += 1
                     continue
 
-                # Xử lý design gốc một lần
                 cropped_img = img.crop((crop_coords['x'], crop_coords['y'], crop_coords['x'] + crop_coords['w'], crop_coords['y'] + crop_coords['h']))
 
-                # Vòng lặp qua từng mockup set
                 for mockup_name in mockup_sets_to_use:
                     if mockup_name not in mockup_cache:
                         continue
-                    
+
                     mockup_data = mockup_cache.get(mockup_name)
                     mockup_to_use = mockup_data["white"] if is_white else mockup_data["black"]
-                    
+
                     if not mockup_to_use:
                         print(f"Lỗi khi tải mockup {mockup_name}. Bỏ qua.")
                         continue
-                    
+
                     user_config = {
                         "watermark_text": mockup_data.get("watermark_text")
                     }
-                    
-                    # Tạo ảnh final
+
                     final_mockup = process_image(cropped_img, mockup_to_use, mockup_data.get("coords"), user_config)
                     if not final_mockup:
                         continue
 
-                    # Tạo tên file mới
                     base_filename = os.path.splitext(filename)[0]
                     cleaned_title = clean_title(base_filename.replace('-', ' ').strip(), title_clean_keywords)
-                    
+
                     prefix_to_add = mockup_data.get("title_prefix_to_add", "")
                     suffix_to_add = mockup_data.get("title_suffix_to_add", "")
-                    
+
                     final_filename = f"{prefix_to_add} {cleaned_title} {suffix_to_add}".replace('  ', ' ').strip()
                     final_filename += '.webp'
-                    
+
                     img_byte_arr = BytesIO()
                     final_mockup.save(img_byte_arr, format="WEBP", quality=90)
 
-                    if mockup_name not in zip_files:
-                        zip_filename = f"{mockup_name}.{domain}_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{new_count}_images.zip"
-                        zip_path = os.path.join(output_path, zip_filename)
-                        zip_files[mockup_name] = zipfile.ZipFile(zip_path, 'w')
+                    if mockup_name not in images_for_zip:
+                        images_for_zip[mockup_name] = []
                     
-                    zip_files[mockup_name].writestr(final_filename, img_byte_arr.getvalue())
+                    images_for_zip[mockup_name].append((final_filename, img_byte_arr.getvalue()))
                     processed_count += 1
-            
+
             except Exception as e:
                 print(f"Lỗi khi xử lý ảnh {url}: {e}")
                 skipped_count += 1
-        
+
         urls_summary[domain] = {'processed': processed_count, 'skipped': skipped_count, 'total_to_process': new_count}
-    
-    for zf in zip_files.values():
-        zf.close()
-    
+
+    for mockup_name, image_list in images_for_zip.items():
+        if not image_list:
+            continue
+            
+        total_images_in_zip = len(image_list)
+        
+        # ⭐ THAY ĐỔI DUY NHẤT: Dùng dấu chấm "." sau prefix để phân tách
+        zip_filename = f"{mockup_name}.{datetime.now().strftime('%Y%m%d_%H%M%S')}_{total_images_in_zip}_images.zip"
+        
+        zip_path = os.path.join(output_path, zip_filename)
+        
+        print(f"Đang tạo file: {zip_path} với {total_images_in_zip} ảnh.")
+        
+        with zipfile.ZipFile(zip_path, 'w') as zf:
+            for filename, data in image_list:
+                zf.writestr(filename, data)
+
     write_log(urls_summary)
     print("Kết thúc quy trình.")
 
