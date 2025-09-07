@@ -1,8 +1,8 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-07 05:33:33
+Timestamp: 2025-09-07 07:33:47
 
-Domain: teeextra.com
-  Processed Images: 16
-  Skipped Images: 0
-  Total URLs to Process: 8
+Domain: meredpremium.com
+  Processed Images: 156
+  Skipped Images: 29
+  Total URLs to Process: 107
 
