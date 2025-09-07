@@ -59,13 +59,34 @@ def download_image(url):
 
 def clean_title(title, keywords):
     """Làm sạch tiêu đề bằng cách loại bỏ các từ khóa không phân biệt chữ hoa/thường."""
-    # Tạo một pattern regex để tìm kiếm các từ khóa.
-    # Đảm bảo nó chỉ khớp với toàn bộ từ bằng r'\b...\b' và xử lý dấu gạch nối.
-    cleaned_keywords = [re.escape(k.replace(' ', '-').strip()) for k in keywords]
+    
+    # --- LOGIC MỚI ĐƯỢC CẬP NHẬT ---
+    # Tạo ra các pattern linh hoạt hơn, chấp nhận cả khoảng trắng và gạch nối
+    cleaned_keywords = []
+    for k in keywords:
+        # Tách từ khóa thành các phần dựa trên dấu gạch nối hoặc khoảng trắng
+        # Ví dụ: "t-shirt" -> ["t", "shirt"]
+        keyword_parts = re.split(r'[- ]', k.strip())
+        
+        # Escape các phần để tránh lỗi với ký tự đặc biệt của regex
+        escaped_parts = [re.escape(part) for part in keyword_parts]
+        
+        # Nối các phần lại bằng một pattern linh hoạt: (?:-|\s)?
+        # Pattern này có nghĩa là "một dấu gạch nối HOẶC một khoảng trắng, xuất hiện 0 hoặc 1 lần"
+        # Điều này sẽ khớp với "t-shirt", "t shirt", và cả "tshirt"
+        flexible_k = r'(?:-|\s)?'.join(escaped_parts)
+        cleaned_keywords.append(flexible_k)
+    # --- KẾT THÚC LOGIC MỚI ---
+
+    # Sắp xếp các từ khóa từ dài nhất đến ngắn nhất để ưu tiên các từ khóa cụ thể hơn
+    # Đây là một lớp bảo vệ bổ sung cực kỳ quan trọng
+    cleaned_keywords.sort(key=len, reverse=True)
+    
     pattern = r'\b(' + '|'.join(cleaned_keywords) + r')\b'
     
     cleaned_title = re.sub(pattern, '', title, flags=re.IGNORECASE).strip()
     
+    # Thay thế gạch nối và các khoảng trắng thừa sau khi đã clean regex
     return cleaned_title.replace('-', ' ').replace('  ', ' ')
 
 
