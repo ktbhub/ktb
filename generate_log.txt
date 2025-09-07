@@ -1,13 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-07 09:51:59
+Timestamp: 2025-09-07 10:37:19
 
 Domain: geekteesus.com
-  Processed Images: 30
+  Processed Images: 18
   Skipped Images: 0
-  Total URLs to Process: 15
+  Total URLs to Process: 9
 
 Domain: teleteeshirt.com
-  Processed Images: 104
-  Skipped Images: 1
-  Total URLs to Process: 53
+  Processed Images: 34
+  Skipped Images: 0
+  Total URLs to Process: 17
+
+Domain: teeslocal.com
+  Processed Images: 7
+  Skipped Images: 23
+  Total URLs to Process: 30
 
