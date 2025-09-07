@@ -192,6 +192,19 @@
                 "mockup_sets_to_use": ["whatwillwear", "ktbtee"],
                 "coords": { "x": 271, "y": 243, "w": 500, "h": 555 }
             }
+        ],
+        "teeslocal.com": [
+            {
+                "pattern": "-shirt.jpg",
+                "action": "skip"
+            },
+            {
+                "pattern": "-hoodie.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["whatwillwear", "ktbtee"],
+                "coords": { "x": 343, "y": 415, "w": 334, "h": 363 },
+                "skipBlack": true
+            }
         ]
     }
 }
