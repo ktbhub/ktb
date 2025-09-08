@@ -2,7 +2,7 @@ name: KTB Image Generator
 
 on:
   repository_dispatch:
-    types: [new_urls_available]
+    types: [new_image_available]
   workflow_dispatch:
 
 permissions:
