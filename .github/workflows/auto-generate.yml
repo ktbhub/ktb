@@ -50,11 +50,11 @@ jobs:
           git commit -m "Generated new mockups and log [skip ci]" || echo "No changes to commit"
           git push
 
-      # === BƯỚC MỚI ĐƯỢC THÊM VÀO ===
+      # === BƯỚC NÀY ĐƯỢC CẬP NHẬT ĐỂ AN TOÀN HƠN ===
       - name: Check for new zip files
         id: check_zip_files
         run: |
-          if ls generated-zips/*.zip 1> /dev/null 2>&1; then
+          if [ -d "generated-zips" ] && ls generated-zips/*.zip 1> /dev/null 2>&1; then
             echo "files_exist=true" >> $GITHUB_OUTPUT
           else
             echo "files_exist=false" >> $GITHUB_OUTPUT
