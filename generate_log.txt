@@ -1,13 +1,13 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-08 13:23:40
+Timestamp: 2025-09-08 13:54:16
 
-Domain: uscraftedtees.com
-  Processed Images: 45
+Domain: teeworksusa.com
+  Processed Images: 206
   Skipped Images: 0
-  Total URLs to Process: 45
+  Total URLs to Process: 103
 
-Domain: capitoneshirt.com
-  Processed Images: 52
+Domain: teleteeshirt.com
+  Processed Images: 46
   Skipped Images: 0
-  Total URLs to Process: 26
+  Total URLs to Process: 23
 
