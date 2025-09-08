@@ -1,8 +1,13 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-08 03:57:31
+Timestamp: 2025-09-08 04:49:48
 
 Domain: dreameshirt.com
-  Processed Images: 4
+  Processed Images: 26
   Skipped Images: 0
-  Total URLs to Process: 2
+  Total URLs to Process: 13
+
+Domain: teespix.com
+  Processed Images: 204
+  Skipped Images: 0
+  Total URLs to Process: 102
 
