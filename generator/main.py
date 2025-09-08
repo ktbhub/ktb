@@ -181,20 +181,25 @@ def get_repo_size(path='.'):
     return total_size / (1024 * 1024)
 
 def cleanup_old_zips():
-    """Dọn dẹp các file zip cũ bằng cách xóa các file cũ nhất để giải phóng dung lượng."""
+    """Xóa TOÀN BỘ file .zip trong thư mục output khi action bắt đầu."""
     output_path = os.path.join(REPO_ROOT, OUTPUT_DIR)
     if not os.path.exists(output_path):
-        return
+        return # Nếu thư mục không tồn tại, không làm gì cả
 
-    files = sorted(
-        [f for f in os.listdir(output_path) if f.endswith(".zip")],
-        key=lambda f: os.path.getmtime(os.path.join(output_path, f))
-    )
+    print("Bắt đầu dọn dẹp tất cả các file zip cũ...")
     
-    while len(files) > MAX_OLD_ZIP_COUNT:
-        file_to_remove = files.pop(0)
-        os.remove(os.path.join(output_path, file_to_remove))
-        print(f"Đã xóa file zip cũ nhất: {file_to_remove}")
+    # Lặp qua tất cả các mục trong thư mục output
+    for filename in os.listdir(output_path):
+        # Nếu mục đó là file và có đuôi .zip
+        if filename.endswith(".zip"):
+            file_path = os.path.join(output_path, filename)
+            try:
+                os.remove(file_path)
+                print(f"Đã xóa: {filename}")
+            except Exception as e:
+                print(f"Lỗi khi xóa file {filename}: {e}")
+                
+    print("Dọn dẹp hoàn tất.")
 
 # --- Logic chính ---
 
