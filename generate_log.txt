@@ -1,8 +1,23 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-09 16:16:50
+Timestamp: 2025-09-09 16:48:36
+
+Domain: techteesusa.com
+  Processed Images: 6
+  Skipped Images: 0
+  Total URLs to Process: 3
+
+Domain: teehandus.com
+  Processed Images: 38
+  Skipped Images: 18
+  Total URLs to Process: 56
+
+Domain: capitoneshirt.com
+  Processed Images: 0
+  Skipped Images: 58
+  Total URLs to Process: 58
 
 Domain: teleteeshirt.com
-  Processed Images: 74
+  Processed Images: 178
   Skipped Images: 0
-  Total URLs to Process: 37
+  Total URLs to Process: 89
 
