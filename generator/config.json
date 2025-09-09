@@ -49,7 +49,7 @@
             "title_prefix_to_add": "Premium",
             "title_suffix_to_add": "Tee Shirt"
         },
-        "vflippa": {
+        "albumcoverprint": {
             "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_5.webp",
             "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_5.webp",
             "coords": { "x": 310, "y": 201, "w": 406, "h": 535 },
@@ -69,7 +69,7 @@
             {
                 "pattern": "-Posters-white.jpg",
                 "action": "generate",
-                "mockup_sets_to_use": ["ktbtee", "whatwillwear"],
+                "mockup_sets_to_use": ["ktbtee", "albumcoverprint"],
                 "coords": { "x": 163, "y": 29, "w": 281, "h": 386 }
             },
             {
@@ -146,7 +146,7 @@
             {
                 "pattern": "-Ornament.jpg",
                 "action": "generate",
-                "mockup_sets_to_use": ["ktbtee", "whatwillwear"],
+                "mockup_sets_to_use": ["ktbtee", "albumcoverprint"],
                 "coords": { "x": 207, "y": 210, "w": 358, "h": 338 }
             },
             {
@@ -213,7 +213,7 @@
             {
                 "pattern": "-t-shirt-white.jpg",
                 "action": "generate",
-                "mockup_sets_to_use": ["whatwillwear", "ktbtee"],
+                "mockup_sets_to_use": ["albumcoverprint", "ktbtee"],
                 "coords": { "x": 321, "y": 271, "w": 374, "h": 498 }
             },
             {
@@ -248,7 +248,7 @@
             {
                 "pattern": "-Poster.webp",
                 "action": "generate",
-                "mockup_sets_to_use": ["whatwillwear"],
+                "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 218, "y": 136, "w": 313, "h": 438 }
             }
         ]
