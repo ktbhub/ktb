@@ -1,8 +1,13 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-09 14:54:39
+Timestamp: 2025-09-09 15:32:01
 
-Domain: meredpremium.com
-  Processed Images: 14
+Domain: teeworksusa.com
+  Processed Images: 78
   Skipped Images: 0
-  Total URLs to Process: 7
+  Total URLs to Process: 48
+
+Domain: dreameshirt.com
+  Processed Images: 40
+  Skipped Images: 0
+  Total URLs to Process: 20
 
