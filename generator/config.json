@@ -258,6 +258,15 @@
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 218, "y": 136, "w": 313, "h": 438 }
             }
+        ],
+        "teehandus.com": [
+            {
+                "pattern": "-long-sleeve.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 274, "y": 215, "w": 439, "h": 529 },
+                "skipWhite": true
+            }
         ]
     }
 }
