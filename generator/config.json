@@ -81,7 +81,7 @@
             {
                 "pattern": "-poster.jpg",
                 "action": "generate",
-                "mockup_sets_to_use": ["ktbtee"],
+                "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 399, "y": 180, "w": 980, "h": 1405 }
             }
         ],
@@ -97,7 +97,7 @@
             {
                 "pattern": "-shirt.jpg",
                 "action": "generate",
-                "mockup_sets_to_use": ["ktbtee"],
+                "mockup_sets_to_use": ["whatwillwear", "albumcoverprint"],
                 "coords": { "x": 250, "y": 176, "w": 314, "h": 422 }
             }
         ],
@@ -160,7 +160,7 @@
             {
                 "pattern": "-Shirt.jpg",
                 "action": "generate",
-                "mockup_sets_to_use": ["whatwillwear", "ktbtee"],
+                "mockup_sets_to_use": ["whatwillwear", "albumcoverprint"],
                 "coords": { "x": 248, "y": 183, "w": 426, "h": 498 }
             }
         ],
