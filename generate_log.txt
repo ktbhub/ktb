@@ -1,28 +1,8 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-08 23:59:02
+Timestamp: 2025-09-09 01:59:38
 
-Domain: geekteesus.com
-  Processed Images: 0
-  Skipped Images: 18
-  Total URLs to Process: 18
-
-Domain: teeextra.com
-  Processed Images: 16
+Domain: teeworksusa.com
+  Processed Images: 113
   Skipped Images: 0
-  Total URLs to Process: 8
-
-Domain: teespix.com
-  Processed Images: 228
-  Skipped Images: 0
-  Total URLs to Process: 114
-
-Domain: nowbestshirt.com
-  Processed Images: 6
-  Skipped Images: 33
-  Total URLs to Process: 36
-
-Domain: fanaticity.com
-  Processed Images: 46
-  Skipped Images: 0
-  Total URLs to Process: 46
+  Total URLs to Process: 80
 
