@@ -4,6 +4,7 @@ import json
 import zipfile
 import re
 from datetime import datetime
+import pytz
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 
@@ -406,10 +407,15 @@ def main():
 
 def write_log(urls_summary):
     """Ghi tóm tắt kết quả generate vào file generate_log.txt."""
+    # Lấy múi giờ Việt Nam
+    vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
+    # Lấy thời gian hiện tại theo múi giờ Việt Nam
+    now_vietnam = datetime.now(vietnam_tz)
+    
     log_file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "generate_log.txt")
     with open(log_file_path, "w", encoding="utf-8") as f:
         f.write(f"--- Summary of Last Generation ---\n")
-        f.write(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        f.write(f"Timestamp: {now_vietnam.strftime('%Y-%m-%d %H:%M:%S')}\n\n")
         for domain, counts in urls_summary.items():
             f.write(f"Domain: {domain}\n")
             f.write(f"  Processed Images: {counts['processed']}\n")
