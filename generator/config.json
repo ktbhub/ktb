@@ -207,6 +207,13 @@
                 "action": "generate",
                 "mockup_sets_to_use": ["whatwillwear", "ktbtee"],
                 "coords": { "x": 287, "y": 246, "w": 421, "h": 494 }
+            },
+            {
+                "pattern": "-Shirt.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 140, "y": 274, "w": 690, "h": 733 },
+                "skipWhite": true
             }
         ],
         "clickoneshirt.com": [
