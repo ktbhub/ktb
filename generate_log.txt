@@ -1,13 +1,3 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 15:39:14
-
-Domain: teeworksusa.com
-  Processed Images: 1
-  Skipped Images: 0
-  Total URLs to Process: 1
-
-Domain: dreameshirt.com
-  Processed Images: 48
-  Skipped Images: 0
-  Total URLs to Process: 24
+Timestamp: 2025-09-10 15:50:38
 
