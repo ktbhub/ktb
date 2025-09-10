@@ -1,3 +1,13 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-09 23:46:55
+Timestamp: 2025-09-10 08:56:40
+
+Domain: fanaticity.com
+  Processed Images: 84
+  Skipped Images: 0
+  Total URLs to Process: 84
+
+Domain: teehandus.com
+  Processed Images: 0
+  Skipped Images: 2
+  Total URLs to Process: 2
 
