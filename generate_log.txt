@@ -1,13 +1,8 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 09:57:17
+Timestamp: 2025-09-10 11:01:45
 
-Domain: geekteesus.com
-  Processed Images: 30
-  Skipped Images: 13
-  Total URLs to Process: 28
-
-Domain: teleteeshirt.com
-  Processed Images: 104
+Domain: dreameshirt.com
+  Processed Images: 4
   Skipped Images: 0
-  Total URLs to Process: 52
+  Total URLs to Process: 2
 
