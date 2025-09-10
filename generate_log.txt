@@ -1,28 +1,28 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 16:55:44
+Timestamp: 2025-09-10 17:29:32
+
+Domain: techteesusa.com
+  Processed Images: 108
+  Skipped Images: 0
+  Total URLs to Process: 54
 
 Domain: teehandus.com
-  Processed Images: 13
-  Skipped Images: 23
-  Total URLs to Process: 36
+  Processed Images: 47
+  Skipped Images: 2
+  Total URLs to Process: 49
 
 Domain: capitoneshirt.com
   Processed Images: 0
-  Skipped Images: 78
-  Total URLs to Process: 78
+  Skipped Images: 91
+  Total URLs to Process: 91
 
 Domain: teleteeshirt.com
-  Processed Images: 22
+  Processed Images: 200
   Skipped Images: 0
-  Total URLs to Process: 11
-
-Domain: arjomany.com
-  Processed Images: 0
-  Skipped Images: 6
-  Total URLs to Process: 6
+  Total URLs to Process: 100
 
 Domain: designatshop.com
-  Processed Images: 18
+  Processed Images: 49
   Skipped Images: 0
-  Total URLs to Process: 18
+  Total URLs to Process: 49
 
