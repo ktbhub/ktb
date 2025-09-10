@@ -1,18 +1,13 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 14:25:59
+Timestamp: 2025-09-10 14:38:24
 
 Domain: meredpremium.com
-  Processed Images: 112
-  Skipped Images: 26
-  Total URLs to Process: 82
-
-Domain: collectionpostertour.com
-  Processed Images: 9
-  Skipped Images: 4
-  Total URLs to Process: 13
+  Processed Images: 74
+  Skipped Images: 0
+  Total URLs to Process: 37
 
 Domain: neoteeco.com
-  Processed Images: 4
-  Skipped Images: 2
-  Total URLs to Process: 6
+  Processed Images: 0
+  Skipped Images: 5
+  Total URLs to Process: 5
 
