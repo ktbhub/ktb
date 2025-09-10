@@ -1,18 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 17:47:26
+Timestamp: 2025-09-10 17:54:04
 
 Domain: techteesusa.com
-  Processed Images: 126
+  Processed Images: 10
   Skipped Images: 0
-  Total URLs to Process: 63
+  Total URLs to Process: 5
 
 Domain: teeworksusa.com
-  Processed Images: 28
+  Processed Images: 25
   Skipped Images: 0
-  Total URLs to Process: 28
+  Total URLs to Process: 25
 
-Domain: neoteeco.com
+Domain: teeslocal.com
   Processed Images: 0
-  Skipped Images: 7
-  Total URLs to Process: 7
+  Skipped Images: 8
+  Total URLs to Process: 8
 
