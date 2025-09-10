@@ -11,6 +11,7 @@
             "Posters-white",
             "black-poster",
             "white-poster",
+            "poster-portrait"
             "ladies-tee",
             "sweatshirt",
             "t-shirts",
@@ -284,6 +285,60 @@
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 292, "y": 163, "w": 403, "h": 529 },
                 "skipWhite": true
+            }
+        ],
+        "melonashirt.com": [
+            {
+                "pattern": "-Shirts-men-shirt.webp",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 220, "y": 120, "w": 321, "h": 435 }
+            }
+        ],
+        "dalatshirt.com": [
+            {
+                "pattern": "-T-shirts-Shirt.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 405, "y": 150, "w": 311, "h": 401 }
+            }
+        ],
+        "lovingsquad.com": [
+            {
+                "pattern": "-T-shirt.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 313, "y": 152, "w": 429, "h": 449 }
+            }
+        ],
+        "arjomany.com": [
+            {
+                "pattern": "-poster.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 178, "y": 69, "w": 454, "h": 674 }
+            }
+        ],
+        "designatshop.com": [
+            {
+                "pattern": "-t-shirt.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 121, "y": 232, "w": 435, "h": 479 }
+            }
+        ],
+        "collectionpostertour.com": [
+            {
+                "pattern": "-t-shirt-poster-portrait.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 200, "y": 105, "w": 411, "h": 634 }
+            },
+            {
+                "pattern": "-poster-poster-portrait.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 175, "y": 91, "w": 454, "h": 686 }
             }
         ]
     }
