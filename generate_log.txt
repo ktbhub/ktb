@@ -1,18 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 22:44:40
+Timestamp: 2025-09-10 23:48:04
 
-Domain: legendusashirt.com
-  Processed Images: 79
-  Skipped Images: 0
-  Total URLs to Process: 79
-
-Domain: uscraftedtees.com
-  Processed Images: 2
-  Skipped Images: 0
-  Total URLs to Process: 2
+Domain: geekteesus.com
+  Processed Images: 0
+  Skipped Images: 9
+  Total URLs to Process: 9
 
 Domain: teleteeshirt.com
-  Processed Images: 24
+  Processed Images: 36
   Skipped Images: 0
-  Total URLs to Process: 12
+  Total URLs to Process: 18
+
+Domain: dalatshirt.com
+  Processed Images: 100
+  Skipped Images: 0
+  Total URLs to Process: 100
 
