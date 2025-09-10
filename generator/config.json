@@ -318,6 +318,12 @@
                 "action": "generate",
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 178, "y": 69, "w": 454, "h": 674 }
+            },
+            {
+                "pattern": "-men.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 250, "y": 155, "w": 313, "h": 433 }
             }
         ],
         "designatshop.com": [
