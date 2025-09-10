@@ -7,7 +7,7 @@ from datetime import datetime
 import pytz
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
-
+#Đây là bản update test thử chức năng magicwand đa điểm, nếu không work có thể back lại version backup lưu ở PCHome 10:33PM 9.10.25
 # --- Cấu hình ---
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = "generated-zips"
@@ -15,7 +15,6 @@ CONFIG_FILE = os.path.join(REPO_ROOT, "generator", "config.json")
 
 # Giới hạn dung lượng repo GitHub
 MAX_REPO_SIZE_MB = 900
-MAX_OLD_ZIP_COUNT = 10
 
 # --- Các hàm hỗ trợ ---
 
@@ -61,77 +60,79 @@ def download_image(url):
 def clean_title(title, keywords):
     """Làm sạch tiêu đề bằng cách loại bỏ các từ khóa không phân biệt chữ hoa/thường."""
     
-    # --- LOGIC MỚI ĐƯỢC CẬP NHẬT ---
-    # Tạo ra các pattern linh hoạt hơn, chấp nhận cả khoảng trắng và gạch nối
     cleaned_keywords = []
     for k in keywords:
-        # Tách từ khóa thành các phần dựa trên dấu gạch nối hoặc khoảng trắng
-        # Ví dụ: "t-shirt" -> ["t", "shirt"]
         keyword_parts = re.split(r'[- ]', k.strip())
-        
-        # Escape các phần để tránh lỗi với ký tự đặc biệt của regex
         escaped_parts = [re.escape(part) for part in keyword_parts]
-        
-        # Nối các phần lại bằng một pattern linh hoạt: (?:-|\s)?
-        # Pattern này có nghĩa là "một dấu gạch nối HOẶC một khoảng trắng, xuất hiện 0 hoặc 1 lần"
-        # Điều này sẽ khớp với "t-shirt", "t shirt", và cả "tshirt"
         flexible_k = r'(?:-|\s)?'.join(escaped_parts)
         cleaned_keywords.append(flexible_k)
-    # --- KẾT THÚC LOGIC MỚI ---
 
-    # Sắp xếp các từ khóa từ dài nhất đến ngắn nhất để ưu tiên các từ khóa cụ thể hơn
-    # Đây là một lớp bảo vệ bổ sung cực kỳ quan trọng
     cleaned_keywords.sort(key=len, reverse=True)
     
     pattern = r'\b(' + '|'.join(cleaned_keywords) + r')\b'
     
     cleaned_title = re.sub(pattern, '', title, flags=re.IGNORECASE).strip()
     
-    # Thay thế gạch nối và các khoảng trắng thừa sau khi đã clean regex
     return cleaned_title.replace('-', ' ').replace('  ', ' ')
 
 
 def process_image(design_img, mockup_img, mockup_config, user_config):
     """Cắt, trim và dán design vào mockup."""
     
-    # 1. Xóa nền bằng thuật toán "magic wand"
+    # --- LOGIC XÓA NỀN "MAGIC WAND" ĐA ĐIỂM ĐƯỢC NÂNG CẤP ---
     design_w, design_h = design_img.size
     
+    # 1. Lấy màu nền tham chiếu từ góc (0, 0)
     seed_color = design_img.getpixel((0, 0))
     seed_r, seed_g, seed_b = seed_color[:3]
     
     pixels = design_img.load()
-    stack = [(0, 0)]
-    
-    visited = set()
-    
-    while stack:
-        x, y = stack.pop()
-        
-        if (x, y) in visited:
+    visited = set() # Dùng chung cho tất cả các lần flood fill
+
+    # 2. Tạo danh sách các điểm ảnh trên 4 cạnh của ảnh để làm điểm bắt đầu
+    border_pixels = []
+    for x in range(design_w):
+        border_pixels.append((x, 0)) # Cạnh trên
+        border_pixels.append((x, design_h - 1)) # Cạnh dưới
+    for y in range(1, design_h - 1):
+        border_pixels.append((0, y)) # Cạnh trái
+        border_pixels.append((design_w - 1, y)) # Cạnh phải
+
+    # 3. Lặp qua từng điểm trên cạnh để bắt đầu flood fill
+    for start_x, start_y in border_pixels:
+        if (start_x, start_y) in visited:
             continue
-        visited.add((x, y))
-        
-        if not (0 <= x < design_w and 0 <= y < design_h):
-            continue
-        
-        current_pixel = pixels[x, y]
-        current_r, current_g, current_b = current_pixel[:3]
-        
-        if abs(current_r - seed_r) < 30 and abs(current_g - seed_g) < 30 and abs(current_b - seed_b) < 30:
-            pixels[x, y] = (0, 0, 0, 0)
+
+        start_pixel_color = pixels[start_x, start_y]
+        start_r, start_g, start_b = start_pixel_color[:3]
+
+        if abs(start_r - seed_r) < 30 and abs(start_g - seed_g) < 30 and abs(start_b - seed_b) < 30:
+            stack = [(start_x, start_y)]
             
-            stack.append((x + 1, y))
-            stack.append((x - 1, y))
-            stack.append((x, y + 1))
-            stack.append((x, y - 1))
+            while stack:
+                x, y = stack.pop()
+                
+                if (x, y) in visited or not (0 <= x < design_w and 0 <= y < design_h):
+                    continue
+                visited.add((x, y))
+                
+                current_pixel = pixels[x, y]
+                current_r, current_g, current_b = current_pixel[:3]
+                
+                if abs(current_r - seed_r) < 30 and abs(current_g - seed_g) < 30 and abs(current_b - seed_b) < 30:
+                    pixels[x, y] = (0, 0, 0, 0) # Chuyển thành trong suốt
+                    
+                    stack.append((x + 1, y))
+                    stack.append((x - 1, y))
+                    stack.append((x, y + 1))
+                    stack.append((x, y - 1))
+
+    # --- KẾT THÚC LOGIC XÓA NỀN NÂNG CẤP ---
             
-    # 2. Cắt lại ảnh sau khi xóa nền để bỏ phần trong suốt thừa
     trimmed_design = get_trimmed_image_with_padding(design_img)
     if not trimmed_design:
         return None
     
-    # 3. Dán design đã cắt và xử lý vào mockup
     mockup_w, mockup_h = mockup_config['w'], mockup_config['h']
     design_w, design_h = trimmed_design.size
     
@@ -148,26 +149,50 @@ def process_image(design_img, mockup_img, mockup_config, user_config):
     final_mockup = mockup_img.copy()
     final_mockup.paste(resized_design, (final_x, final_y), resized_design)
     
-    watermark_text = user_config.get("watermark_text")
-    if watermark_text:
-        draw = ImageDraw.Draw(final_mockup)
-        try:
-            # Sửa đổi dòng này để sử dụng đường dẫn tuyệt đối đến font
-            font_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "verdanab.ttf")
-            font = ImageFont.truetype(font_path, 100)
-        except IOError:
-            # Fallback nếu font verdanab.ttf không được tìm thấy
-            print("Lỗi: Không tìm thấy tệp font. Sử dụng font mặc định.")
-            font = ImageFont.load_default()
-        
-        text_bbox = draw.textbbox((0, 0), watermark_text, font=font)
-        text_w = text_bbox[2] - text_bbox[0]
-        text_h = text_bbox[3] - text_bbox[1]
-        
-        text_x = final_mockup.width - text_w - 20
-        text_y = final_mockup.height - text_h - 20
-        
-        draw.text((text_x, text_y), watermark_text, fill=(0, 0, 0, 128), font=font)
+    # --- LOGIC THÊM CHỮ KÝ (WATERMARK) ĐƯỢC NÂNG CẤP ---
+    watermark_content = user_config.get("watermark_text")
+    if watermark_content:
+        # Trường hợp 1: Chữ ký là một URL ảnh
+        if watermark_content.startswith(('http://', 'https://')):
+            print(f"Đang thêm chữ ký dạng ảnh từ: {watermark_content}")
+            watermark_img = download_image(watermark_content)
+            
+            if watermark_img:
+                max_wm_width = 280
+                wm_w, wm_h = watermark_img.size
+                if wm_w > max_wm_width:
+                    aspect_ratio = wm_h / wm_w
+                    new_w = max_wm_width
+                    new_h = int(new_w * aspect_ratio)
+                    watermark_img = watermark_img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+                
+                wm_w, wm_h = watermark_img.size
+                paste_x = final_mockup.width - wm_w - 20
+                paste_y = final_mockup.height - wm_h - 50
+                
+                final_mockup.paste(watermark_img, (paste_x, paste_y), watermark_img)
+            else:
+                print(f"Lỗi: Không tải được ảnh chữ ký từ URL.")
+
+        # Trường hợp 2: Chữ ký là dạng text như cũ
+        else:
+            print(f"Đang thêm chữ ký dạng chữ: {watermark_content}")
+            draw = ImageDraw.Draw(final_mockup)
+            try:
+                font_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "verdanab.ttf")
+                font = ImageFont.truetype(font_path, 100)
+            except IOError:
+                print("Lỗi: Không tìm thấy tệp font. Sử dụng font mặc định.")
+                font = ImageFont.load_default()
+            
+            text_bbox = draw.textbbox((0, 0), watermark_content, font=font)
+            text_w = text_bbox[2] - text_bbox[0]
+            text_h = text_bbox[3] - text_bbox[1]
+            
+            text_x = final_mockup.width - text_w - 20
+            text_y = final_mockup.height - text_h - 50
+            
+            draw.text((text_x, text_y), watermark_content, fill=(0, 0, 0, 128), font=font)
     
     return final_mockup
 
@@ -185,13 +210,11 @@ def cleanup_old_zips():
     """Xóa TOÀN BỘ file .zip trong thư mục output khi action bắt đầu."""
     output_path = os.path.join(REPO_ROOT, OUTPUT_DIR)
     if not os.path.exists(output_path):
-        return # Nếu thư mục không tồn tại, không làm gì cả
+        return
 
     print("Bắt đầu dọn dẹp tất cả các file zip cũ...")
     
-    # Lặp qua tất cả các mục trong thư mục output
     for filename in os.listdir(output_path):
-        # Nếu mục đó là file và có đuôi .zip
         if filename.endswith(".zip"):
             file_path = os.path.join(output_path, filename)
             try:
@@ -258,7 +281,7 @@ def main():
             print(f"Không có quy tắc nào được định nghĩa cho domain {domain}. Bỏ qua.")
             continue
 
-        domain_rules.sort(key=lambda x: len(x['pattern']), reverse=True)
+        domain_rules.sort(key=lambda x: len(x.get('pattern', '')), reverse=True)
 
         try:
             urls_url = f"https://raw.githubusercontent.com/ktbihow/image-crawler/main/{domain}.txt"
@@ -301,9 +324,9 @@ def main():
 
             filename = os.path.basename(url)
 
-            matched_rule = next((rule for rule in domain_rules if rule["pattern"] in filename), None)
+            matched_rule = next((rule for rule in domain_rules if rule.get("pattern", "") in filename), None)
 
-            if not matched_rule or matched_rule["action"] == "skip":
+            if not matched_rule or matched_rule.get("action") == "skip":
                 print(f"Skipping: Rule not found or action is 'skip' for file: {filename}")
                 skipped_count += 1
                 continue
@@ -391,8 +414,11 @@ def main():
             
         total_images_in_zip = len(image_list)
         
-        # ⭐ THAY ĐỔI DUY NHẤT: Dùng dấu chấm "." sau prefix để phân tách
-        zip_filename = f"{mockup_name}.{datetime.now().strftime('%Y%m%d_%H%M%S')}_{total_images_in_zip}_images.zip"
+        # Lấy múi giờ Việt Nam
+        vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
+        now_vietnam = datetime.now(vietnam_tz)
+        
+        zip_filename = f"{mockup_name}.{now_vietnam.strftime('%Y%m%d_%H%M%S')}_{total_images_in_zip}_images.zip"
         
         zip_path = os.path.join(output_path, zip_filename)
         
@@ -407,9 +433,7 @@ def main():
 
 def write_log(urls_summary):
     """Ghi tóm tắt kết quả generate vào file generate_log.txt."""
-    # Lấy múi giờ Việt Nam
     vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
-    # Lấy thời gian hiện tại theo múi giờ Việt Nam
     now_vietnam = datetime.now(vietnam_tz)
     
     log_file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "generate_log.txt")
