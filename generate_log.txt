@@ -1,33 +1,33 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 12:12:28
+Timestamp: 2025-09-10 12:33:58
 
 Domain: techteesusa.com
-  Processed Images: 100
-  Skipped Images: 0
-  Total URLs to Process: 50
-
-Domain: teespix.com
   Processed Images: 12
+  Skipped Images: 2
+  Total URLs to Process: 8
+
+Domain: teeworksusa.com
+  Processed Images: 2
   Skipped Images: 0
-  Total URLs to Process: 6
+  Total URLs to Process: 1
+
+Domain: teeextra.com
+  Processed Images: 14
+  Skipped Images: 0
+  Total URLs to Process: 7
 
 Domain: legendusashirt.com
-  Processed Images: 80
-  Skipped Images: 0
-  Total URLs to Process: 80
+  Processed Images: 10
+  Skipped Images: 13
+  Total URLs to Process: 23
 
-Domain: arjomany.com
-  Processed Images: 40
-  Skipped Images: 58
-  Total URLs to Process: 98
+Domain: teehandus.com
+  Processed Images: 0
+  Skipped Images: 71
+  Total URLs to Process: 71
 
-Domain: collectionpostertour.com
-  Processed Images: 36
-  Skipped Images: 64
-  Total URLs to Process: 100
-
-Domain: neoteeco.com
-  Processed Images: 34
-  Skipped Images: 66
-  Total URLs to Process: 100
+Domain: teeslocal.com
+  Processed Images: 0
+  Skipped Images: 30
+  Total URLs to Process: 30
 
