@@ -11,7 +11,8 @@
             "Posters-white",
             "black-poster",
             "white-poster",
-            "poster-portrait"
+            "poster-portrait",
+            "Poster-Canvas",
             "ladies-tee",
             "sweatshirt",
             "t-shirts",
@@ -339,6 +340,14 @@
                 "action": "generate",
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 175, "y": 91, "w": 454, "h": 686 }
+            }
+        ],
+        "neoteeco.com": [
+            {
+                "pattern": "-Poster-Canvas.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 212, "y": 98, "w": 581, "h": 813 }
             }
         ]
     }
