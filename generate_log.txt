@@ -1,13 +1,13 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 14:38:24
+Timestamp: 2025-09-10 14:47:38
 
-Domain: meredpremium.com
-  Processed Images: 74
-  Skipped Images: 0
-  Total URLs to Process: 37
+Domain: melonashirt.com
+  Processed Images: 30
+  Skipped Images: 1
+  Total URLs to Process: 31
 
-Domain: neoteeco.com
+Domain: dalatshirt.com
   Processed Images: 0
-  Skipped Images: 5
-  Total URLs to Process: 5
+  Skipped Images: 2
+  Total URLs to Process: 2
 
