@@ -227,7 +227,7 @@
                 "skipWhite": true
             },
             {
-                "pattern": "-shirt.jpg",
+                "pattern": "-shirt.webp",
                 "action": "generate",
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 140, "y": 274, "w": 690, "h": 733 },
