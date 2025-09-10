@@ -225,6 +225,13 @@
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 140, "y": 274, "w": 690, "h": 733 },
                 "skipWhite": true
+            },
+            {
+                "pattern": "-shirt.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 140, "y": 274, "w": 690, "h": 733 },
+                "skipWhite": true
             }
         ],
         "clickoneshirt.com": [
