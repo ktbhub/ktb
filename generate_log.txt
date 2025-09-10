@@ -1,33 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 20:26:38
+Timestamp: 2025-09-10 20:44:26
 
 Domain: geekteesus.com
   Processed Images: 0
-  Skipped Images: 14
-  Total URLs to Process: 14
-
-Domain: techteesusa.com
-  Processed Images: 14
-  Skipped Images: 0
-  Total URLs to Process: 7
+  Skipped Images: 15
+  Total URLs to Process: 15
 
 Domain: teeworksusa.com
-  Processed Images: 44
-  Skipped Images: 6
-  Total URLs to Process: 28
-
-Domain: legendusashirt.com
-  Processed Images: 0
-  Skipped Images: 1
-  Total URLs to Process: 1
-
-Domain: uscraftedtees.com
-  Processed Images: 0
-  Skipped Images: 13
-  Total URLs to Process: 13
+  Processed Images: 10
+  Skipped Images: 0
+  Total URLs to Process: 5
 
 Domain: lovingsquad.com
-  Processed Images: 43
-  Skipped Images: 0
-  Total URLs to Process: 43
+  Processed Images: 15
+  Skipped Images: 85
+  Total URLs to Process: 100
 
