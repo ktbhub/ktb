@@ -276,6 +276,15 @@
                 "coords": { "x": 274, "y": 215, "w": 439, "h": 529 },
                 "skipWhite": true
             }
+        ],
+        "legendusashirt.com": [
+            {
+                "pattern": "-Sweater.webp",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 292, "y": 163, "w": 403, "h": 529 },
+                "skipWhite": true
+            }
         ]
     }
 }
