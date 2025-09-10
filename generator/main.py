@@ -79,53 +79,53 @@ def clean_title(title, keywords):
 def process_image(design_img, mockup_img, mockup_config, user_config):
     """Cắt, trim và dán design vào mockup."""
     
-    # --- LOGIC XÓA NỀN "MAGIC WAND" ĐA ĐIỂM ĐƯỢC NÂNG CẤP ---
+    # --- LOGIC XÓA NỀN "MAGIC WAND" 4 GÓC ---
     design_w, design_h = design_img.size
-    
-    # 1. Lấy màu nền tham chiếu từ góc (0, 0)
-    seed_color = design_img.getpixel((0, 0))
-    seed_r, seed_g, seed_b = seed_color[:3]
-    
     pixels = design_img.load()
     visited = set() # Dùng chung cho tất cả các lần flood fill
 
-    # 2. Tạo danh sách các điểm ảnh trên 4 cạnh của ảnh để làm điểm bắt đầu
-    border_pixels = []
-    for x in range(design_w):
-        border_pixels.append((x, 0)) # Cạnh trên
-        border_pixels.append((x, design_h - 1)) # Cạnh dưới
-    for y in range(1, design_h - 1):
-        border_pixels.append((0, y)) # Cạnh trái
-        border_pixels.append((design_w - 1, y)) # Cạnh phải
+    # 1. Xác định 4 điểm góc để bắt đầu
+    corner_points = [
+        (0, 0),                  # Góc trên-trái
+        (design_w - 1, 0),       # Góc trên-phải
+        (0, design_h - 1),       # Góc dưới-trái
+        (design_w - 1, design_h - 1) # Góc dưới-phải
+    ]
 
-    # 3. Lặp qua từng điểm trên cạnh để bắt đầu flood fill
-    for start_x, start_y in border_pixels:
+    # 2. Lặp qua từng góc và chạy một "magic wand" độc lập
+    for start_x, start_y in corner_points:
+        # Nếu điểm này đã được xử lý trong một lần loang màu trước đó thì bỏ qua
         if (start_x, start_y) in visited:
             continue
 
-        start_pixel_color = pixels[start_x, start_y]
-        start_r, start_g, start_b = start_pixel_color[:3]
-
-        if abs(start_r - seed_r) < 30 and abs(start_g - seed_g) < 30 and abs(start_b - seed_b) < 30:
-            stack = [(start_x, start_y)]
+        # Lấy màu tham chiếu TẠI CHÍNH GÓC ĐÓ
+        seed_color = design_img.getpixel((start_x, start_y))
+        seed_r, seed_g, seed_b = seed_color[:3]
+        
+        # Bắt đầu quy trình loang màu mới từ góc này
+        stack = [(start_x, start_y)]
+        
+        while stack:
+            x, y = stack.pop()
             
-            while stack:
-                x, y = stack.pop()
+            if (x, y) in visited or not (0 <= x < design_w and 0 <= y < design_h):
+                continue
+            
+            # Đánh dấu pixel này đã được ghé thăm
+            visited.add((x, y))
+            
+            current_pixel = pixels[x, y]
+            current_r, current_g, current_b = current_pixel[:3]
+            
+            # So sánh màu hiện tại với màu tham chiếu của GÓC NÀY
+            if abs(current_r - seed_r) < 30 and abs(current_g - seed_g) < 30 and abs(current_b - seed_b) < 30:
+                pixels[x, y] = (0, 0, 0, 0) # Chuyển thành trong suốt
                 
-                if (x, y) in visited or not (0 <= x < design_w and 0 <= y < design_h):
-                    continue
-                visited.add((x, y))
-                
-                current_pixel = pixels[x, y]
-                current_r, current_g, current_b = current_pixel[:3]
-                
-                if abs(current_r - seed_r) < 30 and abs(current_g - seed_g) < 30 and abs(current_b - seed_b) < 30:
-                    pixels[x, y] = (0, 0, 0, 0) # Chuyển thành trong suốt
-                    
-                    stack.append((x + 1, y))
-                    stack.append((x - 1, y))
-                    stack.append((x, y + 1))
-                    stack.append((x, y - 1))
+                # Thêm các điểm lân cận vào stack để xử lý tiếp
+                stack.append((x + 1, y))
+                stack.append((x - 1, y))
+                stack.append((x, y + 1))
+                stack.append((x, y - 1))
 
     # --- KẾT THÚC LOGIC XÓA NỀN NÂNG CẤP ---
             
@@ -133,6 +133,7 @@ def process_image(design_img, mockup_img, mockup_config, user_config):
     if not trimmed_design:
         return None
     
+    # Các bước còn lại giữ nguyên...
     mockup_w, mockup_h = mockup_config['w'], mockup_config['h']
     design_w, design_h = trimmed_design.size
     
@@ -149,14 +150,10 @@ def process_image(design_img, mockup_img, mockup_config, user_config):
     final_mockup = mockup_img.copy()
     final_mockup.paste(resized_design, (final_x, final_y), resized_design)
     
-    # --- LOGIC THÊM CHỮ KÝ (WATERMARK) ĐƯỢC NÂNG CẤP ---
     watermark_content = user_config.get("watermark_text")
     if watermark_content:
-        # Trường hợp 1: Chữ ký là một URL ảnh
         if watermark_content.startswith(('http://', 'https://')):
-            print(f"Đang thêm chữ ký dạng ảnh từ: {watermark_content}")
             watermark_img = download_image(watermark_content)
-            
             if watermark_img:
                 max_wm_width = 280
                 wm_w, wm_h = watermark_img.size
@@ -165,33 +162,22 @@ def process_image(design_img, mockup_img, mockup_config, user_config):
                     new_w = max_wm_width
                     new_h = int(new_w * aspect_ratio)
                     watermark_img = watermark_img.resize((new_w, new_h), Image.Resampling.LANCZOS)
-                
                 wm_w, wm_h = watermark_img.size
                 paste_x = final_mockup.width - wm_w - 20
                 paste_y = final_mockup.height - wm_h - 50
-                
                 final_mockup.paste(watermark_img, (paste_x, paste_y), watermark_img)
-            else:
-                print(f"Lỗi: Không tải được ảnh chữ ký từ URL.")
-
-        # Trường hợp 2: Chữ ký là dạng text như cũ
         else:
-            print(f"Đang thêm chữ ký dạng chữ: {watermark_content}")
             draw = ImageDraw.Draw(final_mockup)
             try:
                 font_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "verdanab.ttf")
                 font = ImageFont.truetype(font_path, 100)
             except IOError:
-                print("Lỗi: Không tìm thấy tệp font. Sử dụng font mặc định.")
                 font = ImageFont.load_default()
-            
             text_bbox = draw.textbbox((0, 0), watermark_content, font=font)
             text_w = text_bbox[2] - text_bbox[0]
             text_h = text_bbox[3] - text_bbox[1]
-            
             text_x = final_mockup.width - text_w - 20
             text_y = final_mockup.height - text_h - 50
-            
             draw.text((text_x, text_y), watermark_content, fill=(0, 0, 0, 128), font=font)
     
     return final_mockup
