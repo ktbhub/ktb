@@ -1,13 +1,23 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-10 14:47:38
+Timestamp: 2025-09-10 15:04:22
+
+Domain: teeworksusa.com
+  Processed Images: 2
+  Skipped Images: 0
+  Total URLs to Process: 1
 
 Domain: melonashirt.com
-  Processed Images: 30
-  Skipped Images: 1
-  Total URLs to Process: 31
+  Processed Images: 27
+  Skipped Images: 0
+  Total URLs to Process: 27
 
 Domain: dalatshirt.com
   Processed Images: 0
-  Skipped Images: 2
-  Total URLs to Process: 2
+  Skipped Images: 32
+  Total URLs to Process: 32
+
+Domain: arjomany.com
+  Processed Images: 3
+  Skipped Images: 34
+  Total URLs to Process: 37
 
