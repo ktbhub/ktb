@@ -31,13 +31,13 @@
             "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black.webp",
             "coords": { "x": 444, "y": 331, "w": 370, "h": 527 },
             "watermark_text": "[XU]",
-            "title_prefix_to_add": "Premium",
+            "title_prefix_to_add": "Official",
             "title_suffix_to_add": "T Shirts"
         },
         "whatwillwear": {
-            "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_2.webp",
-            "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_2.webp",
-            "coords": { "x": 352, "y": 308, "w": 448, "h": 623 },
+            "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_3.webp",
+            "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_3.webp",
+            "coords": { "x": 370, "y": 356, "w": 415, "h": 610 },
             "watermark_text": "[Whatwillwear]",
             "title_prefix_to_add": "Official",
             "title_suffix_to_add": "Shirts"
@@ -47,8 +47,8 @@
             "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_4.webp",
             "coords": { "x": 348, "y": 263, "w": 463, "h": 595 },
             "watermark_text": "[KTB]",
-            "title_prefix_to_add": "Premium",
-            "title_suffix_to_add": "Tee Shirt"
+            "title_prefix_to_add": "Official",
+            "title_suffix_to_add": "TShirt Sweatshirt"
         },
         "albumcoverprint": {
             "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_5.webp",
@@ -57,6 +57,14 @@
             "watermark_text": "[ACP]",
             "title_prefix_to_add": "Official",
             "title_suffix_to_add": "T Shirt Sweater"
+        },
+        "nextdomain": {
+            "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_2.webp",
+            "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_2.webp",
+            "coords": { "x": 352, "y": 308, "w": 448, "h": 623 },
+            "watermark_text": "[nextdomain]",
+            "title_prefix_to_add": "Official",
+            "title_suffix_to_add": "Shirts"
         }
     },
     "domains": {
