@@ -291,7 +291,7 @@
         "legendusashirt.com": [
             {
                 "pattern": "-Sweater.webp",
-                "action": "generate",
+                "action": "skip",
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 292, "y": 163, "w": 403, "h": 529 },
                 "skipWhite": true
