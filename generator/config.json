@@ -4,6 +4,7 @@
             "Orament-Christmas-den",
             "Ornament-X-Mas-2024",
             "Ornament-poster-black",
+            "Mug-and-Ornament",
             "T-shirts-shirt",
             "t-shirt-white",
             "t-shirt-black",
@@ -94,6 +95,12 @@
                 "action": "generate",
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 399, "y": 180, "w": 980, "h": 1405 }
+            },
+            {
+                "pattern": "-Mug-and-Ornament.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 285, "y": 734, "w": 374, "h": 512 }
             }
         ],
         "techteesusa.com": [
