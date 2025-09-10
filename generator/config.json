@@ -253,7 +253,7 @@
                 "pattern": "-classic-mens.jpeg",
                 "action": "generate",
                 "mockup_sets_to_use": ["whatwillwear"],
-                "coords": { "x": 278, "y": 270, "w": 346, "h": 443 },
+                "coords": { "x": 278, "y": 270, "w": 346, "h": 443 }
             }
         ],
         "fanaticity.com": [
