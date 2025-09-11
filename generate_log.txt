@@ -1,8 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-11 12:52:44
+Timestamp: 2025-09-11 13:23:20
 
-Domain: teeworksusa.com
-  Processed Images: 10
+Domain: eteeclothing.com
+  Processed Images: 9
   Skipped Images: 0
-  Total URLs to Process: 10
+  Total URLs to Process: 9
+
+Domain: teeslocal.com
+  Processed Images: 0
+  Skipped Images: 37
+  Total URLs to Process: 37
+
+Domain: designatshop.com
+  Processed Images: 0
+  Skipped Images: 56
+  Total URLs to Process: 56
 
