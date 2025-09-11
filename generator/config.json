@@ -325,6 +325,12 @@
                 "action": "generate",
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 313, "y": 152, "w": 429, "h": 449 }
+            },
+            {
+                "pattern": "-Ladies.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 321, "y": 158, "w": 346, "h": 504 }
             }
         ],
         "arjomany.com": [
