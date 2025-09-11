@@ -383,7 +383,7 @@
                 "action": "generate",
                 "pre_clean_regex": "_[a-zA-Z0-9]+$",
                 "mockup_sets_to_use": ["albumcoverprint"],
-                "coords": { "x": 291, "y": 135, "w": 414, "h": 567 }
+                "coords": { "x": 329, "y": 137, "w": 359, "h": 536 }
             }
         ],
         "eteeclothing.com": [
