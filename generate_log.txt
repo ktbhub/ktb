@@ -1,28 +1,38 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-11 15:52:12
+Timestamp: 2025-09-11 17:00:36
 
-Domain: dreameshirt.com
-  Processed Images: 58
+Domain: eteeclothing.com
+  Processed Images: 81
   Skipped Images: 0
-  Total URLs to Process: 29
+  Total URLs to Process: 81
 
-Domain: teespix.com
-  Processed Images: 170
-  Skipped Images: 1
-  Total URLs to Process: 86
+Domain: legendusashirt.com
+  Processed Images: 0
+  Skipped Images: 15
+  Total URLs to Process: 15
+
+Domain: capitoneshirt.com
+  Processed Images: 46
+  Skipped Images: 34
+  Total URLs to Process: 80
+
+Domain: clickoneshirt.com
+  Processed Images: 13
+  Skipped Images: 0
+  Total URLs to Process: 9
+
+Domain: teleteeshirt.com
+  Processed Images: 186
+  Skipped Images: 0
+  Total URLs to Process: 93
 
 Domain: teeslocal.com
   Processed Images: 0
-  Skipped Images: 8
-  Total URLs to Process: 8
+  Skipped Images: 32
+  Total URLs to Process: 32
 
-Domain: melonashirt.com
-  Processed Images: 64
-  Skipped Images: 0
-  Total URLs to Process: 64
-
-Domain: arjomany.com
-  Processed Images: 9
-  Skipped Images: 0
-  Total URLs to Process: 9
+Domain: designatshop.com
+  Processed Images: 58
+  Skipped Images: 1
+  Total URLs to Process: 59
 
