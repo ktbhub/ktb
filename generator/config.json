@@ -385,6 +385,22 @@
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 291, "y": 135, "w": 414, "h": 567 }
             }
+        ],
+        "eteeclothing.com": [
+            {
+                "pattern": "-sweater.webp",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 326, "y": 214, "w": 332, "h": 419 }
+            }
+        ],
+        "milkywayshirt.com": [
+            {
+                "pattern": "-Shirt.webp",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 274, "y": 173, "w": 447, "h": 523 }
+            }
         ]
     }
 }
