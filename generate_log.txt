@@ -1,23 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-11 20:10:08
+Timestamp: 2025-09-11 21:19:52
 
-Domain: nowbestshirt.com
-  Processed Images: 0
+Domain: fanaticity.com
+  Processed Images: 104
   Skipped Images: 1
-  Total URLs to Process: 1
+  Total URLs to Process: 105
 
-Domain: uscraftedtees.com
-  Processed Images: 89
+Domain: teleteeshirt.com
+  Processed Images: 162
   Skipped Images: 0
-  Total URLs to Process: 89
-
-Domain: dalatshirt.com
-  Processed Images: 100
-  Skipped Images: 0
-  Total URLs to Process: 100
+  Total URLs to Process: 81
 
 Domain: lovingsquad.com
-  Processed Images: 39
-  Skipped Images: 0
-  Total URLs to Process: 39
+  Processed Images: 99
+  Skipped Images: 1
+  Total URLs to Process: 100
 
