@@ -98,7 +98,7 @@
             },
             {
                 "pattern": "-Mug-and-Ornament.jpg",
-                "action": "generate",
+                "action": "skip",
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 285, "y": 734, "w": 374, "h": 512 }
             }
