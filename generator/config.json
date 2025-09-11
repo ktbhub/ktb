@@ -370,6 +370,15 @@
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 212, "y": 98, "w": 581, "h": 813 }
             }
+        ],
+        "newshirtstore.com": [
+            {
+                "pattern": "",
+                "action": "generate",
+                "pre_clean_regex": "_[a-zA-Z0-9]+$",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 291, "y": 135, "w": 414, "h": 567 }
+            }
         ]
     }
 }
