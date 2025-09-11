@@ -1,23 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-11 17:53:52
+Timestamp: 2025-09-11 18:02:24
 
 Domain: techteesusa.com
-  Processed Images: 74
-  Skipped Images: 0
-  Total URLs to Process: 37
+  Processed Images: 82
+  Skipped Images: 1
+  Total URLs to Process: 42
 
-Domain: teeextra.com
-  Processed Images: 16
-  Skipped Images: 0
-  Total URLs to Process: 8
-
-Domain: eteeclothing.com
-  Processed Images: 16
-  Skipped Images: 0
-  Total URLs to Process: 16
+Domain: teeworksusa.com
+  Processed Images: 40
+  Skipped Images: 1
+  Total URLs to Process: 21
 
 Domain: clickoneshirt.com
-  Processed Images: 72
+  Processed Images: 38
   Skipped Images: 0
-  Total URLs to Process: 72
+  Total URLs to Process: 19
 
