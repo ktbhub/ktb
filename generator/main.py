@@ -371,6 +371,12 @@ def main():
                         continue
 
                     base_filename = os.path.splitext(filename)[0]
+                    # --- BẮT ĐẦU THAY ĐỔI ---
+                    # Áp dụng regex làm sạch sơ bộ nếu được định nghĩa trong rule
+                    pre_clean_pattern = matched_rule.get("pre_clean_regex")
+                    if pre_clean_pattern:
+                        base_filename = re.sub(pre_clean_pattern, '', base_filename)
+                    # --- KẾT THÚC THAY ĐỔI ---
                     cleaned_title = clean_title(base_filename.replace('-', ' ').strip(), title_clean_keywords)
 
                     prefix_to_add = mockup_data.get("title_prefix_to_add", "")
