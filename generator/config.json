@@ -222,6 +222,10 @@
                 "skipWhite": true
             },
             {
+                "pattern": "-2-sided-shirt.webp",
+                "action": "skip"
+            },
+            {
                 "pattern": "-sweater.webp",
                 "action": "generate",
                 "mockup_sets_to_use": ["whatwillwear", "ktbtee"],
