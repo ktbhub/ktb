@@ -401,6 +401,14 @@
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 274, "y": 173, "w": 447, "h": 523 }
             }
+        ],
+        "berrylittles.com": [
+            {
+                "pattern": "-t-shirt.jpg",
+                "action": "generate",
+                "mockup_sets_to_use": ["albumcoverprint"],
+                "coords": { "x": 335, "y": 227, "w": 465, "h": 651 }
+            }
         ]
     }
 }
