@@ -1,5 +1,10 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-11 11:53:47
+Timestamp: 2025-09-11 11:59:41
+
+Domain: techteesusa.com
+  Processed Images: 14
+  Skipped Images: 1
+  Total URLs to Process: 8
 
 Domain: teeextra.com
   Processed Images: 16
