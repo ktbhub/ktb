@@ -230,16 +230,16 @@ def main():
     title_clean_keywords = defaults.get("title_clean_keywords", [])
 
     try:
-        log_url = "https://raw.githubusercontent.com/ktbihow/image-crawler/main/crawl-log.txt"
+        log_url = "https://raw.githubusercontent.com/ktbihow/imagecrawler/main/imagecrawler.log"
         log_content = requests.get(log_url).text
     except Exception as e:
-        print(f"Lỗi: Không thể tải file crawl-log.txt từ GitHub. {e}")
+        print(f"Lỗi: Không thể tải file imagecrawler.log từ GitHub. {e}")
         return
 
     lines = log_content.splitlines()
     domains_to_process = {}
     for line in lines:
-        if "new URLs added" in line:
+        if "New Images" in line:
             parts = line.split(":")
             domain = parts[0].strip()
             new_urls_count = int(parts[1].split()[0])
@@ -270,7 +270,7 @@ def main():
         domain_rules.sort(key=lambda x: len(x.get('pattern', '')), reverse=True)
 
         try:
-            urls_url = f"https://raw.githubusercontent.com/ktbihow/image-crawler/main/{domain}.txt"
+            urls_url = f"https://raw.githubusercontent.com/ktbihow/imagecrawler/main/domain/{domain}.txt"
             all_urls_content = requests.get(urls_url).text
             all_urls = [line.strip() for line in all_urls_content.splitlines() if line.strip()]
         except Exception as e:
