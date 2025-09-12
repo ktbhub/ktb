@@ -1,13 +1,7 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 19:10:32 +07
+Timestamp: 2025-09-12 19:24:10 +07
 
 Domain: teeworksusa.com
-  Skipped Images: 27
-  Total URLs to Process: 27
-
-Domain: nowbestshirt.com
-  whatwillwear: 1
-  ktbtee: 1
-  Skipped Images: 9
-  Total URLs to Process: 10
+  Skipped Images: 1
+  Total URLs to Process: 1
 
