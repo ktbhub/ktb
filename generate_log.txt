@@ -1,28 +1,23 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 14:23:08
+Timestamp: 2025-09-12 14:36:12
+
+Domain: geekteesus.com
+  Processed Images: 0
+  Skipped Images: 15
+  Total URLs to Process: 15
 
 Domain: techteesusa.com
-  Processed Images: 50
-  Skipped Images: 0
-  Total URLs to Process: 25
+  Processed Images: 70
+  Skipped Images: 1
+  Total URLs to Process: 36
 
 Domain: teehandus.com
-  Processed Images: 73
-  Skipped Images: 27
-  Total URLs to Process: 100
+  Processed Images: 34
+  Skipped Images: 0
+  Total URLs to Process: 34
 
 Domain: capitoneshirt.com
-  Processed Images: 3
-  Skipped Images: 0
-  Total URLs to Process: 3
-
-Domain: collectionpostertour.com
-  Processed Images: 1
-  Skipped Images: 13
-  Total URLs to Process: 14
-
-Domain: newshirtstore.com
-  Processed Images: 100
-  Skipped Images: 0
-  Total URLs to Process: 100
+  Processed Images: 43
+  Skipped Images: 47
+  Total URLs to Process: 90
 
