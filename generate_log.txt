@@ -1,18 +1,12 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 20:26:13 +07
+Timestamp: 2025-09-12 20:58:53 +07
 
 Domain: geekteesus.com
-  Skipped Images: 12
-  Total URLs to Process: 12
-
-Domain: teespix.com
-  whatwillwear: 108
-  albumcoverprint: 108
-  Skipped Images: 1
-  Total URLs to Process: 109
+  Skipped Images: 26
+  Total URLs to Process: 26
 
 Domain: lovingsquad.com
-  albumcoverprint: 63
-  Skipped Images: 0
-  Total URLs to Process: 63
+  albumcoverprint: 94
+  Skipped Images: 6
+  Total URLs to Process: 100
 
