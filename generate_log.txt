@@ -1,43 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 10:49:08
+Timestamp: 2025-09-12 10:52:47
 
-Domain: geekteesus.com
-  Processed Images: 0
-  Skipped Images: 1
-  Total URLs to Process: 1
-
-Domain: techteesusa.com
-  Processed Images: 32
+Domain: milkywayshirt.com
+  Processed Images: 16
   Skipped Images: 0
   Total URLs to Process: 16
 
-Domain: teehandus.com
-  Processed Images: 2
-  Skipped Images: 0
-  Total URLs to Process: 2
-
-Domain: capitoneshirt.com
-  Processed Images: 1
-  Skipped Images: 0
-  Total URLs to Process: 1
-
-Domain: melonashirt.com
-  Processed Images: 46
-  Skipped Images: 0
-  Total URLs to Process: 46
-
-Domain: arjomany.com
-  Processed Images: 41
-  Skipped Images: 16
-  Total URLs to Process: 57
-
-Domain: collectionpostertour.com
-  Processed Images: 32
-  Skipped Images: 6
-  Total URLs to Process: 38
+Domain: legendusashirt.com
+  Processed Images: 0
+  Skipped Images: 26
+  Total URLs to Process: 26
 
 Domain: neoteeco.com
-  Processed Images: 4
+  Processed Images: 6
   Skipped Images: 0
-  Total URLs to Process: 4
+  Total URLs to Process: 6
 
