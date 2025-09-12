@@ -1,39 +1,20 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 17:34:59 +07
+Timestamp: 2025-09-12 17:44:43 +07
 
 Domain: techteesusa.com
-  ktbtee: 138
-  whatwillwear: 138
+  ktbtee: 6
+  whatwillwear: 6
   Skipped Images: 0
-  Total URLs to Process: 138
+  Total URLs to Process: 6
+
+Domain: teeextra.com
+  ktbtee: 60
+  albumcoverprint: 60
+  Skipped Images: 0
+  Total URLs to Process: 60
 
 Domain: eteeclothing.com
-  albumcoverprint: 66
+  albumcoverprint: 55
   Skipped Images: 0
-  Total URLs to Process: 66
-
-Domain: legendusashirt.com
-  albumcoverprint: 76
-  Skipped Images: 25
-  Total URLs to Process: 101
-
-Domain: clickoneshirt.com
-  albumcoverprint: 2
-  ktbtee: 5
-  Skipped Images: 0
-  Total URLs to Process: 5
-
-Domain: teeslocal.com
-  Skipped Images: 30
-  Total URLs to Process: 30
-
-Domain: lovingsquad.com
-  albumcoverprint: 48
-  Skipped Images: 0
-  Total URLs to Process: 48
-
-Domain: designatshop.com
-  albumcoverprint: 35
-  Skipped Images: 0
-  Total URLs to Process: 35
+  Total URLs to Process: 55
 
