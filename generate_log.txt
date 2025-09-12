@@ -1,18 +1,28 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 12:56:41
+Timestamp: 2025-09-12 14:23:08
 
-Domain: eteeclothing.com
-  Processed Images: 60
+Domain: techteesusa.com
+  Processed Images: 50
   Skipped Images: 0
-  Total URLs to Process: 60
+  Total URLs to Process: 25
 
-Domain: legendusashirt.com
-  Processed Images: 94
-  Skipped Images: 4
-  Total URLs to Process: 98
+Domain: teehandus.com
+  Processed Images: 73
+  Skipped Images: 27
+  Total URLs to Process: 100
+
+Domain: capitoneshirt.com
+  Processed Images: 3
+  Skipped Images: 0
+  Total URLs to Process: 3
+
+Domain: collectionpostertour.com
+  Processed Images: 1
+  Skipped Images: 13
+  Total URLs to Process: 14
 
 Domain: newshirtstore.com
-  Processed Images: 9
+  Processed Images: 100
   Skipped Images: 0
-  Total URLs to Process: 9
+  Total URLs to Process: 100
 
