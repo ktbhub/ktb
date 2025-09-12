@@ -1,73 +1,13 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 12:12:15
+Timestamp: 2025-09-12 12:20:23
 
-Domain: berrylittles.com
-  Processed Images: 10
-  Skipped Images: 0
-  Total URLs to Process: 10
-
-Domain: dreameshirt.com
-  Processed Images: 46
-  Skipped Images: 0
-  Total URLs to Process: 23
-
-Domain: eteeclothing.com
-  Processed Images: 47
-  Skipped Images: 0
-  Total URLs to Process: 47
-
-Domain: milkywayshirt.com
+Domain: teeextra.com
   Processed Images: 16
   Skipped Images: 0
-  Total URLs to Process: 16
-
-Domain: teespix.com
-  Processed Images: 172
-  Skipped Images: 2
-  Total URLs to Process: 88
-
-Domain: legendusashirt.com
-  Processed Images: 0
-  Skipped Images: 32
-  Total URLs to Process: 32
-
-Domain: capitoneshirt.com
-  Processed Images: 23
-  Skipped Images: 16
-  Total URLs to Process: 39
-
-Domain: clickoneshirt.com
-  Processed Images: 163
-  Skipped Images: 0
-  Total URLs to Process: 99
-
-Domain: teeslocal.com
-  Processed Images: 0
-  Skipped Images: 30
-  Total URLs to Process: 30
-
-Domain: arjomany.com
-  Processed Images: 14
-  Skipped Images: 21
-  Total URLs to Process: 35
-
-Domain: designatshop.com
-  Processed Images: 59
-  Skipped Images: 0
-  Total URLs to Process: 59
-
-Domain: collectionpostertour.com
-  Processed Images: 15
-  Skipped Images: 0
-  Total URLs to Process: 15
-
-Domain: neoteeco.com
-  Processed Images: 0
-  Skipped Images: 28
-  Total URLs to Process: 28
+  Total URLs to Process: 8
 
 Domain: newshirtstore.com
-  Processed Images: 50
+  Processed Images: 31
   Skipped Images: 0
-  Total URLs to Process: 50
+  Total URLs to Process: 31
 
