@@ -279,7 +279,7 @@ def main():
 
         urls_to_process = all_urls[:new_count]
 
-        processed_count = 0
+        processed_by_mockup = {}
         skipped_count = 0
 
         mockup_cache = {}
@@ -392,13 +392,17 @@ def main():
                         images_for_zip[mockup_name] = []
                     
                     images_for_zip[mockup_name].append((final_filename, img_byte_arr.getvalue()))
-                    processed_count += 1
+                    processed_by_mockup[mockup_name] = processed_by_mockup.get(mockup_name, 0) + 1
 
             except Exception as e:
                 print(f"Lỗi khi xử lý ảnh {url}: {e}")
                 skipped_count += 1
-
-        urls_summary[domain] = {'processed': processed_count, 'skipped': skipped_count, 'total_to_process': new_count}
+        
+        urls_summary[domain] = {
+            'processed_by_mockup': processed_by_mockup,
+            'skipped': skipped_count,
+            'total_to_process': new_count
+        }
 
     for mockup_name, image_list in images_for_zip.items():
         if not image_list:
@@ -431,12 +435,23 @@ def write_log(urls_summary):
     log_file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "generate_log.txt")
     with open(log_file_path, "w", encoding="utf-8") as f:
         f.write(f"--- Summary of Last Generation ---\n")
-        f.write(f"Timestamp: {now_vietnam.strftime('%Y-%m-%d %H:%M:%S')}\n\n")
-        for domain, counts in urls_summary.items():
-            f.write(f"Domain: {domain}\n")
-            f.write(f"  Processed Images: {counts['processed']}\n")
-            f.write(f"  Skipped Images: {counts['skipped']}\n")
-            f.write(f"  Total URLs to Process: {counts['total_to_process']}\n\n")
+        # Định dạng timestamp với múi giờ +07
+        f.write(f"Timestamp: {now_vietnam.strftime('%Y-%m-%d %H:%M:%S')} +07\n\n")
+        
+        if not urls_summary:
+            f.write("No new images were processed in this run.\n")
+        else:
+            for domain, counts in urls_summary.items():
+                f.write(f"Domain: {domain}\n")
+                
+                processed_by_mockup = counts.get('processed_by_mockup')
+                if processed_by_mockup:
+                    for mockup, count in processed_by_mockup.items():
+                        f.write(f"  {mockup}: {count}\n")
+                
+                f.write(f"  Skipped Images: {counts['skipped']}\n")
+                f.write(f"  Total URLs to Process: {counts['total_to_process']}\n\n")
+
     print(f"Generation summary saved to {log_file_path}")
 
 if __name__ == "__main__":
