@@ -1,13 +1,18 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 12:34:09
+Timestamp: 2025-09-12 12:56:41
 
-Domain: teeextra.com
-  Processed Images: 16
+Domain: eteeclothing.com
+  Processed Images: 60
   Skipped Images: 0
-  Total URLs to Process: 8
+  Total URLs to Process: 60
+
+Domain: legendusashirt.com
+  Processed Images: 94
+  Skipped Images: 4
+  Total URLs to Process: 98
 
 Domain: newshirtstore.com
-  Processed Images: 10
+  Processed Images: 9
   Skipped Images: 0
-  Total URLs to Process: 10
+  Total URLs to Process: 9
 
