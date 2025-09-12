@@ -1,12 +1,9 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 19:37:35 +07
+Timestamp: 2025-09-12 19:46:38 +07
 
-Domain: fanaticity.com
-  whatwillwear: 97
-  Skipped Images: 1
-  Total URLs to Process: 98
-
-Domain: neoteeco.com
-  Skipped Images: 1
-  Total URLs to Process: 1
+Domain: teespix.com
+  whatwillwear: 16
+  albumcoverprint: 16
+  Skipped Images: 0
+  Total URLs to Process: 16
 
