@@ -61,7 +61,7 @@ jobs:
           # Gửi dưới dạng pre-formatted text để giữ nguyên định dạng
           curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage \
           -d chat_id=$TELEGRAM_CHAT_ID \
-          -d text="<pre>${LOG_CONTENT}</pre>" \
+          -d text="${LOG_CONTENT}" \
           -d parse_mode=HTML || echo "Lỗi khi gửi nội dung log!"
 
       # === BƯỚC NÀY ĐƯỢC CẬP NHẬT ĐỂ AN TOÀN HƠN ===
