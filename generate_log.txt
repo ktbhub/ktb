@@ -1,20 +1,19 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 17:49:27 +07
-
-Domain: teeextra.com
-  ktbtee: 11
-  albumcoverprint: 11
-  Skipped Images: 0
-  Total URLs to Process: 11
+Timestamp: 2025-09-12 18:02:18 +07
 
 Domain: uscraftedtees.com
-  albumcoverprint: 4
+  albumcoverprint: 26
   Skipped Images: 0
-  Total URLs to Process: 4
+  Total URLs to Process: 26
+
+Domain: clickoneshirt.com
+  ktbtee: 17
+  Skipped Images: 0
+  Total URLs to Process: 17
 
 Domain: teleteeshirt.com
-  whatwillwear: 14
-  albumcoverprint: 14
+  whatwillwear: 29
+  albumcoverprint: 29
   Skipped Images: 0
-  Total URLs to Process: 14
+  Total URLs to Process: 29
 
