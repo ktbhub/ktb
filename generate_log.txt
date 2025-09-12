@@ -1,7 +1,12 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 19:24:10 +07
+Timestamp: 2025-09-12 19:37:35 +07
 
-Domain: teeworksusa.com
+Domain: fanaticity.com
+  whatwillwear: 97
+  Skipped Images: 1
+  Total URLs to Process: 98
+
+Domain: neoteeco.com
   Skipped Images: 1
   Total URLs to Process: 1
 
