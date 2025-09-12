@@ -1,38 +1,39 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 16:16:57
+Timestamp: 2025-09-12 17:34:59 +07
 
-Domain: dreameshirt.com
-  Processed Images: 46
+Domain: techteesusa.com
+  ktbtee: 138
+  whatwillwear: 138
   Skipped Images: 0
-  Total URLs to Process: 23
+  Total URLs to Process: 138
 
-Domain: melonashirt.com
-  Processed Images: 28
+Domain: eteeclothing.com
+  albumcoverprint: 66
   Skipped Images: 0
-  Total URLs to Process: 28
+  Total URLs to Process: 66
+
+Domain: legendusashirt.com
+  albumcoverprint: 76
+  Skipped Images: 25
+  Total URLs to Process: 101
+
+Domain: clickoneshirt.com
+  albumcoverprint: 2
+  ktbtee: 5
+  Skipped Images: 0
+  Total URLs to Process: 5
+
+Domain: teeslocal.com
+  Skipped Images: 30
+  Total URLs to Process: 30
 
 Domain: lovingsquad.com
-  Processed Images: 100
+  albumcoverprint: 48
   Skipped Images: 0
-  Total URLs to Process: 100
-
-Domain: arjomany.com
-  Processed Images: 0
-  Skipped Images: 1
-  Total URLs to Process: 1
+  Total URLs to Process: 48
 
 Domain: designatshop.com
-  Processed Images: 9
+  albumcoverprint: 35
   Skipped Images: 0
-  Total URLs to Process: 9
-
-Domain: collectionpostertour.com
-  Processed Images: 29
-  Skipped Images: 5
-  Total URLs to Process: 34
-
-Domain: neoteeco.com
-  Processed Images: 11
-  Skipped Images: 4
-  Total URLs to Process: 15
+  Total URLs to Process: 35
 
