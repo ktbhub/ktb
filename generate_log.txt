@@ -1,14 +1,9 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-13 22:46:21 +07
-
-Domain: eteeclothing.com
-  ktbtee: 113
-  Skipped Images: 0
-  Total URLs to Process: 113
+Timestamp: 2025-09-13 22:50:55 +07
 
 Domain: teleteeshirt.com
-  ktbtee: 55
-  albumcoverprint: 55
-  Skipped Images: 1
-  Total URLs to Process: 56
+  ktbtee: 2
+  albumcoverprint: 2
+  Skipped Images: 0
+  Total URLs to Process: 2
 
