@@ -163,6 +163,10 @@
                 "action": "skip"
             },
             {
+                "pattern": "-2-Sided-Shirt.jpg",
+                "action": "skip"
+            },
+            {
                 "pattern": "-Ornament.jpg",
                 "action": "generate",
                 "mockup_sets_to_use": ["ktbtee"],
