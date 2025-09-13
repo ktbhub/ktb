@@ -49,7 +49,7 @@
         "whatwillwear": {
             "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_8.jpg",
             "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_8.jpg",
-            "coords": { "x": 370, "y": 356, "w": 415, "h": 610 },
+            "coords": { "x": 459, "y": 477, "w": 321, "h": 491 },
             "watermark_text": "[Whatwillwear]",
             "title_prefix_to_add": "Official",
             "title_suffix_to_add": "Shirts"
@@ -57,7 +57,7 @@
         "ktbtee": {
             "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_9.jpg",
             "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_9.jpg",
-            "coords": { "x": 348, "y": 263, "w": 463, "h": 595 },
+            "coords": { "x": 476, "y": 501, "w": 366, "h": 569 },
             "watermark_text": "[KTB]",
             "title_prefix_to_add": "Official",
             "title_suffix_to_add": "TShirt Sweatshirt"
@@ -65,7 +65,7 @@
         "albumcoverprint": {
             "white": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_white_7.jpg",
             "black": "https://raw.githubusercontent.com/ktbhub/ktb-image/main/mockup/mockup_black_7.jpg",
-            "coords": { "x": 310, "y": 201, "w": 406, "h": 535 },
+            "coords": { "x": 451, "y": 500, "w": 318, "h": 469 },
             "watermark_text": "[ACP]",
             "title_prefix_to_add": "Official",
             "title_suffix_to_add": "T Shirt Sweater"
