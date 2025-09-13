@@ -1,48 +1,54 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-13 11:48:41 +07
+Timestamp: 2025-09-13 13:04:19 +07
 
-Domain: berrylittles.com
-  albumcoverprint: 10
-  Skipped Images: 0
-  Total URLs to Process: 10
-
-Domain: dreameshirt.com
-  ktbtee: 37
+Domain: techteesusa.com
+  ktbtee: 79
+  whatwillwear: 79
   Skipped Images: 1
-  Total URLs to Process: 38
+  Total URLs to Process: 80
+
+Domain: teeworksusa.com
+  ktbtee: 4
+  albumcoverprint: 4
+  Skipped Images: 0
+  Total URLs to Process: 4
 
 Domain: teeextra.com
-  ktbtee: 32
+  ktbtee: 8
   Skipped Images: 0
-  Total URLs to Process: 32
+  Total URLs to Process: 8
+
+Domain: eteeclothing.com
+  ktbtee: 109
+  Skipped Images: 6
+  Total URLs to Process: 115
 
 Domain: milkywayshirt.com
-  albumcoverprint: 16
-  Skipped Images: 0
-  Total URLs to Process: 16
+  albumcoverprint: 1
+  Skipped Images: 1
+  Total URLs to Process: 2
 
 Domain: teespix.com
-  whatwillwear: 28
-  Skipped Images: 1
-  Total URLs to Process: 29
+  whatwillwear: 73
+  Skipped Images: 0
+  Total URLs to Process: 73
 
-Domain: teeslocal.com
-  albumcoverprint: 29
-  Skipped Images: 1
-  Total URLs to Process: 30
+Domain: legendusashirt.com
+  albumcoverprint: 51
+  Skipped Images: 42
+  Total URLs to Process: 93
 
-Domain: arjomany.com
-  ktbtee: 3
-  Skipped Images: 8
-  Total URLs to Process: 11
+Domain: teehandus.com
+  Skipped Images: 63
+  Total URLs to Process: 63
 
 Domain: designatshop.com
-  ktbtee: 69
-  Skipped Images: 0
-  Total URLs to Process: 69
+  ktbtee: 43
+  Skipped Images: 2
+  Total URLs to Process: 45
 
-Domain: collectionpostertour.com
-  ktbtee: 17
-  Skipped Images: 9
-  Total URLs to Process: 26
+Domain: newshirtstore.com
+  albumcoverprint: 50
+  Skipped Images: 0
+  Total URLs to Process: 50
 
