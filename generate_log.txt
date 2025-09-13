@@ -1,38 +1,17 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-13 16:38:32 +07
-
-Domain: teeworksusa.com
-  Skipped Images: 55
-  Total URLs to Process: 55
-
-Domain: meredpremium.com
-  ktbtee: 1
-  Skipped Images: 0
-  Total URLs to Process: 1
+Timestamp: 2025-09-13 16:42:09 +07
 
 Domain: legendusashirt.com
-  albumcoverprint: 19
-  Skipped Images: 3
-  Total URLs to Process: 22
+  albumcoverprint: 6
+  Skipped Images: 0
+  Total URLs to Process: 6
 
 Domain: teehandus.com
-  Skipped Images: 34
-  Total URLs to Process: 34
-
-Domain: clickoneshirt.com
-  albumcoverprint: 58
-  ktbtee: 42
-  Skipped Images: 0
-  Total URLs to Process: 100
-
-Domain: teleteeshirt.com
-  ktbtee: 26
-  albumcoverprint: 26
-  Skipped Images: 1
-  Total URLs to Process: 27
+  Skipped Images: 10
+  Total URLs to Process: 10
 
 Domain: lovingsquad.com
-  albumcoverprint: 69
+  albumcoverprint: 28
   Skipped Images: 0
-  Total URLs to Process: 69
+  Total URLs to Process: 28
 
