@@ -1,14 +1,19 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-13 13:47:03 +07
+Timestamp: 2025-09-13 15:42:35 +07
 
-Domain: teeworksusa.com
-  ktbtee: 28
-  albumcoverprint: 28
-  Skipped Images: 28
-  Total URLs to Process: 56
+Domain: meredpremium.com
+  ktbtee: 58
+  Skipped Images: 70
+  Total URLs to Process: 128
 
-Domain: eteeclothing.com
-  ktbtee: 33
-  Skipped Images: 1
-  Total URLs to Process: 34
+Domain: dreameshirt.com
+  ktbtee: 26
+  Skipped Images: 0
+  Total URLs to Process: 26
+
+Domain: clickoneshirt.com
+  albumcoverprint: 1
+  ktbtee: 2
+  Skipped Images: 0
+  Total URLs to Process: 3
 
