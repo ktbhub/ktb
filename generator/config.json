@@ -27,6 +27,14 @@
             "shirt",
             "Original",
             "shirt_classic"
+        ],
+        "global_skip_keywords": [
+          "Two-Sided",
+          "2-Sided",
+          "Backside",
+          "Front",
+          "Both-Sides",
+          "Doppel-Seite"
         ]
     },
     "mockup_sets": {
