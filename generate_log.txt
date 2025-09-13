@@ -1,22 +1,22 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-13 18:45:04 +07
+Timestamp: 2025-09-13 20:16:11 +07
 
 Domain: teeextra.com
-  ktbtee: 16
+  ktbtee: 8
   Skipped Images: 0
-  Total URLs to Process: 16
+  Total URLs to Process: 8
 
 Domain: teespix.com
-  whatwillwear: 27
-  Skipped Images: 0
-  Total URLs to Process: 27
-
-Domain: fanaticity.com
-  whatwillwear: 12
-  Skipped Images: 0
-  Total URLs to Process: 12
+  whatwillwear: 97
+  Skipped Images: 2
+  Total URLs to Process: 99
 
 Domain: capitoneshirt.com
-  Skipped Images: 3
-  Total URLs to Process: 3
+  Skipped Images: 36
+  Total URLs to Process: 36
+
+Domain: lovingsquad.com
+  albumcoverprint: 49
+  Skipped Images: 0
+  Total URLs to Process: 49
 
