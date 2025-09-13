@@ -256,6 +256,12 @@
                 "mockup_sets_to_use": ["albumcoverprint"],
                 "coords": { "x": 140, "y": 274, "w": 690, "h": 733 },
                 "skipWhite": true
+            },
+            {
+                "pattern": "-ornament.webp",
+                "action": "generate",
+                "mockup_sets_to_use": ["ktbtee"],
+                "coords": { "x": 238, "y": 202, "w": 517, "h": 626 }
             }
         ],
         "clickoneshirt.com": [
