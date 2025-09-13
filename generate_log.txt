@@ -1,14 +1,22 @@
 --- Summary of Last Generation ---
-Timestamp: 2025-09-12 23:24:06 +07
+Timestamp: 2025-09-13 08:40:46 +07
 
-Domain: meredpremium.com
-  ktbtee: 3
-  whatwillwear: 3
-  Skipped Images: 8
-  Total URLs to Process: 11
+Domain: geekteesus.com
+  Skipped Images: 15
+  Total URLs to Process: 15
 
-Domain: legendusashirt.com
-  albumcoverprint: 36
-  Skipped Images: 3
-  Total URLs to Process: 39
+Domain: teeextra.com
+  whatwillwear: 8
+  ktbtee: 8
+  Skipped Images: 0
+  Total URLs to Process: 8
+
+Domain: eteeclothing.com
+  albumcoverprint: 72
+  Skipped Images: 1
+  Total URLs to Process: 73
+
+Domain: teehandus.com
+  Skipped Images: 54
+  Total URLs to Process: 54
 
