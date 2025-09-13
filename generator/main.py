@@ -18,6 +18,17 @@ MAX_REPO_SIZE_MB = 900
 
 # --- Các hàm hỗ trợ ---
 
+def should_globally_skip(filename, skip_keywords):
+    """
+    Kiểm tra xem tên tệp có chứa bất kỳ từ khóa nào trong danh sách bỏ qua toàn cục hay không.
+    Hàm này không phân biệt chữ hoa/thường.
+    """
+    lower_filename = filename.lower()
+    for keyword in skip_keywords:
+        if keyword.lower() in lower_filename:
+            return True
+    return False
+
 def get_trimmed_image_with_padding(image, max_padding_x=40, max_padding_y=20):
     """Trims transparent borders but keeps a specified maximum padding."""
     bbox = image.getbbox()
@@ -228,6 +239,7 @@ def main():
     mockup_sets_config = configs.get("mockup_sets", {})
 
     title_clean_keywords = defaults.get("title_clean_keywords", [])
+    global_skip_keywords = defaults.get("global_skip_keywords", [])
 
     try:
         log_url = "https://raw.githubusercontent.com/ktbihow/imagecrawler/main/imagecrawler.log"
@@ -309,6 +321,12 @@ def main():
                 break
 
             filename = os.path.basename(url)
+
+            # >> KIỂM TRA BỎ QUA TOÀN CỤC NGAY TẠI ĐÂY <<
+            if should_globally_skip(filename, global_skip_keywords):
+                print(f"Skipping (Global): '{filename}' chứa từ khóa bị cấm.")
+                skipped_count += 1
+                continue
 
             matched_rule = next((rule for rule in domain_rules if rule.get("pattern", "") in filename), None)
 
